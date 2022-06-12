@@ -1,0 +1,39 @@
+.section__sectionHeader {
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+.section__field {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.section__form {
+    margin: auto;
+    border-radius: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.434);
+    background-color: #aeeae3;
+    box-shadow: 8px 8px 24px 0px rgba(126, 196, 188, 1);
+}
+
+.section__label {
+    width: 250px;
+    display: inline-block;
+    margin-right: 5px;
+    text-align: center;
+    border: 1px rgb(0, 0, 0) solid;
+    border-radius: 20px;
+}
+
+.section__label--name {
+    border: none;
+    font-size: 1.1em;
+    line-height: 1.2;
+}
+
+.section__fieldset {
+    border: 0px;
+    margin: auto;
+    text-align: center;
+}
