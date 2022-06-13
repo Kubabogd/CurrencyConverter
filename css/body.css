@@ -15,3 +15,8 @@
     border-radius: 20px;
     box-shadow: 5px 4px 6px 0px #B9BFB9;
 }
+
+.body__backgroundImage {
+
+    background-image: url(../images/background.jpg);
+}
