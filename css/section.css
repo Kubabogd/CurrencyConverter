@@ -6,11 +6,12 @@
 
 .section__field {
     margin-bottom: 0;
-    margin-top: 0;
+    
 }
 
 .section__form {
     margin: auto;
+    max-width: 70%;
     border-radius: 40px;
     border: 1px solid rgba(0, 0, 0, 0.434);
     background-color: #aeeae3;
@@ -18,9 +19,10 @@
 }
 
 .section__label {
-    width: 250px;
+    max-width: 250px;
     display: inline-block;
     margin-right: 5px;
+    max-width: 70%;
     text-align: center;
     border: 1px rgb(0, 0, 0) solid;
     border-radius: 20px;
@@ -34,6 +36,7 @@
 
 .section__fieldset {
     border: 0px;
+    padding: 0;
     margin: auto;
     text-align: center;
 }

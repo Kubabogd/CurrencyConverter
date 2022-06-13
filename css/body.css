@@ -17,6 +17,9 @@
 }
 
 .body__backgroundImage {
-
     background-image: url(../images/background.jpg);
+    background-size: 800px;
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
 }
