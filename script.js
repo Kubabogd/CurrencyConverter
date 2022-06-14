@@ -1,86 +1,84 @@
-let classFirstCurrency = document.querySelector(".classFirstCurrency");
-let classSecondCurrency = document.querySelector(".classSecondCurrency");
-let firstCash = document.querySelector(".firstCash");
-let secondCash = document.querySelector(".secondCash");
-let section = document.querySelector(".section");
-let PLNtoUSD = (1 / 4.28);
-let PLNtoBOLIWAR = (1 / 1.2);
-let PLNtoEURO = (1 / 4.58);
-let result;
-
-
+const section = document.querySelector(".section");
 section.addEventListener("input", () => {
+    const classFirstCurrency = document.querySelector(".classFirstCurrency");
+    const classSecondCurrency = document.querySelector(".classSecondCurrency");
+    const firstCash = document.querySelector(".firstCash");
+    const secondCash = document.querySelector(".secondCash");
+    const PLNtoUSD = (1 / 4.28);
+    const PLNtoBOLIWAR = (1 / 1.2);
+    const PLNtoEURO = (1 / 4.58);
+
+    let result = () => { return parseFloat(firstCash.value) };
+    let cashAfterConversion;
+
 
     if (classFirstCurrency.value === "PLN") {
-
         switch (classSecondCurrency.value) {
             case "PLN":
-                result = parseFloat(firstCash.value);
+                cashAfterConversion = result();
                 break;
             case "USD":
-                result = parseFloat(firstCash.value) * PLNtoUSD;
+                cashAfterConversion = result() * PLNtoUSD;
                 break;
             case "BOLIWAR":
-                result = parseFloat(firstCash.value) * PLNtoBOLIWAR;
+                cashAfterConversion = result() * PLNtoBOLIWAR;
                 break;
             default:
-                result = parseFloat(firstCash.value) * PLNtoEURO;
+                cashAfterConversion = result() * PLNtoEURO;
         }
     }
     if (classFirstCurrency.value === "USD") {
 
         switch (classSecondCurrency.value) {
             case "USD":
-                result = parseFloat(firstCash.value);
+                cashAfterConversion = result();
                 break;
             case "PLN":
-                result = parseFloat(firstCash.value) * (1 / PLNtoUSD);
+                cashAfterConversion = result() * (1 / PLNtoUSD);
                 break;
             case "BOLIWAR":
-                result = parseFloat(firstCash.value) * (1 / PLNtoUSD) * PLNtoBOLIWAR;
+                cashAfterConversion = result() * (1 / PLNtoUSD) * PLNtoBOLIWAR;
                 break;
             default:
-                result = parseFloat(firstCash.value) * (1 / PLNtoUSD) * PLNtoEURO;
+                cashAfterConversion = result() * (1 / PLNtoUSD) * PLNtoEURO;
         }
     } if (classFirstCurrency.value === "EURO") {
 
         switch (classSecondCurrency.value) {
             case "EURO":
-                result = parseFloat(firstCash.value);
+                cashAfterConversion = result();
                 break;
             case "USD":
-                result = parseFloat(firstCash.value) * (1 / PLNtoEURO) * PLNtoUSD;
+                cashAfterConversion = result() * (1 / PLNtoEURO) * PLNtoUSD;
                 break;
             case "BOLIWAR":
-                result = parseFloat(firstCash.value) * (1 / PLNtoEURO) * PLNtoBOLIWAR;
+                cashAfterConversion = result() * (1 / PLNtoEURO) * PLNtoBOLIWAR;
                 break;
             default:
-                result = parseFloat(firstCash.value) * (1 / PLNtoEURO);
+                cashAfterConversion = result() * (1 / PLNtoEURO);
         }
     } if (classFirstCurrency.value === "BOLIWAR") {
 
         switch (classSecondCurrency.value) {
             case "BOLIWAR":
-                result = parseFloat(firstCash.value);
+                cashAfterConversion = result();
                 break;
             case "USD":
-                result = parseFloat(firstCash.value) * (1 / PLNtoBOLIWAR) * PLNtoUSD;
+                cashAfterConversion = result() * (1 / PLNtoBOLIWAR) * PLNtoUSD;
                 break;
             case "PLN":
-                result = parseFloat(firstCash.value) * (1 / PLNtoBOLIWAR);
+                cashAfterConversion = result() * (1 / PLNtoBOLIWAR);
                 break;
             default:
-                result = parseFloat(firstCash.value) * (1 / PLNtoBOLIWAR) * PLNtoEURO;
+                cashAfterConversion = result() * (1 / PLNtoBOLIWAR) * PLNtoEURO;
         }
     }
-    if (result > 0) {
-        secondCash.value = result.toFixed(2);
+    if (result() > 0) {
+        secondCash.value = cashAfterConversion.toFixed(2);
     }
     else {
         secondCash.value = 0;
     }
-
-
 })
 
 
